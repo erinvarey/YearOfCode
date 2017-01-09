@@ -11,7 +11,10 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
 public class PlayingWithRobot {
-	//cookie clicker
+	//Some possibilities to make this appear more human:
+	//randomize the timing between clicks
+	//Change the approximate click location and add more movement
+	//use a vpn or tor to change the location the bot appears to be running from 
 	static Timer timer = new Timer();
     static int seconds = 0;
     
@@ -32,15 +35,11 @@ public class PlayingWithRobot {
 				try {
 					Robot robot = new Robot();
             	robot.delay(10000);
-            	int x =0;
-            	while(x<500000){
             		int mask = InputEvent.BUTTON1_MASK;
             		robot.mouseMove(300, 500);           
             		robot.mousePress(mask);     
             		robot.mouseRelease(mask);
-            		System.out.println("click");
-            		x++;
-            		}
+
 				}
             	catch (AWTException e) {
 					// TODO Auto-generated catch block
@@ -48,7 +47,7 @@ public class PlayingWithRobot {
 				}
             }
         };
-         timer.schedule(task, 0, 50000);
+         timer.schedule(task, 0, 10000);
 
 }
 }
