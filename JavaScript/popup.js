@@ -1,5 +1,33 @@
 //this is where the javascript application goes
-var imgs = document.getElementsByTagName("img");
-for(var i=0, l=imgs.length; i<l; i++) {
-imgs[i].src = "http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg";
+ 
+
+/*document.addEventListener('DOMContentLoaded', function()){
+	var link = document.getElementByID("checkPage");
+	link.addEventListener('click', function()){
+		alert("HI ERIN");
+		replaceImg();
+	});
+});
+*/
+
+function pop(e){
+	var link = document.URL;
+	alert("HI");
+}
+
+var butt = document.querySelector('.checkPage');
+butt.addEventListener('click', pop);
+
+function replaceImg {
+ var images = document.getElementsByTagName('img');
+
+    for(var i = 0; i < images.length; i++)
+    {
+        var img = images[i];
+
+        if(img.src.length == 0)
+        {
+            img.src = 'icon.png';
+        }
+    }
 }
