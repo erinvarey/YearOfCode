@@ -1,15 +1,14 @@
 {
   "manifest_version": 2,
-
-  "name": "Erin Is basic",
-  "description": "This is a practice Chrome Extension",
-  "version": "1.0",
-
-  "browser_action": {
-   "default_icon": "icon.png",
-   "default_popup": "popup.html"
-  },
-  "permissions": [
-   "activeTab"
-   ]
+ 
+  "name": "Modify CSS and HTML",
+  "version": "0.1.0",
+  "description": "Lateral blog post demo extension",
+ 
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://blog.lateral.io/*"]
+  }]
+ 
 }
