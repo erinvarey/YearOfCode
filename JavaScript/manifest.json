@@ -6,9 +6,9 @@
   "description": "Lateral blog post demo extension",
  
   "content_scripts": [{
-    "css": ["styles.css"],
+    //"css": ["styles.css"],
     "js": ["content.js"],
-    "matches": ["https://blog.lateral.io/*"]
+    "matches": ["https://en.wikipedia.org/*","https://www.facebook.com/*"]
   }]
  
 }
