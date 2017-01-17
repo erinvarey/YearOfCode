@@ -1,0 +1,9 @@
+Jan 16th 2016
+
+Reflecting on 2 weeks of a year of code.
+
+I've been pretty good with sticking to the resolution.
+I've learned a lot and having to only do 15 minutes makes it a lot more manageable.
+I find that I want to extend the time past the 15 minutes when I'm really into the code.
+Hopefully this year I can learn a lot of webdev, app coding, and security in hopes of
+one day being a better programmer.

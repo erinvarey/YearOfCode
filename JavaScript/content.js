@@ -15,7 +15,7 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'http://r.fod4.com/c=sq/s=w1000,pd1/o=85/http://a.fod4.com/images/user_photos/1236179/5084aeb818cfaf4f7ab86883f34f2347_square_fullsize.png',
 'http://kittentoob.com/wp-content/uploads/sites/4/2015/08/73.jpg',
 'https://s-media-cache-ak0.pinimg.com/236x/62/bb/4d/62bb4d98b8f0b28110b70beac0450abc.jpg',
-'http://creolened.com/wp-content/uploads/2014/02/funny-cat-pictures-022-033-400.jpg'
+'http://creolened.com/wp-content/uploads/2014/02/funny-cat-pictures-022-033-400.jpg',
 'http://tonsofcats.com/wp-content/uploads/2013/08/6de8c930ef4808a5bd0e7ce4962b00ad.jpg',
 'http://kittentoob.com/wp-content/uploads/sites/4/2013/05/cat_wearing_hat_1.jpg',
 'https://s-media-cache-ak0.pinimg.com/736x/50/3b/61/503b61ddb4623ed5e4ad4ac184d2cb1a.jpg',
@@ -25,12 +25,31 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'http://cdn77.sadanduseless.com/wp-content/uploads/2016/11/hairy9.jpg',
 'http://68.media.tumblr.com/tumblr_lmk1xicwOR1qiw8wpo1_500.jpg',
 'http://tonsofcats.com/wp-content/uploads/2013/08/b5395fe7d2b60cf67818909986693808.jpg',
-'http://img.scoop.it/dsKFMKrSmWJU97HcLQvGpDl72eJkfbmt4t8yenImKBXEejxNn4ZJNZ2ss5Ku7Cxt'];
+'http://img.scoop.it/dsKFMKrSmWJU97HcLQvGpDl72eJkfbmt4t8yenImKBXEejxNn4ZJNZ2ss5Ku7Cxt',
+'http://www.threadbombing.com/data/media/19/27883149_d12662ff8b_o.jpg',
+'http://images-cdn.9gag.com/photo/a9dnogD_700b.jpg',
+'https://i.ytimg.com/vi/gPX3xUsyOAc/hqdefault.jpg',
+'http://s2.favim.com/orig/33/cats-floating-funny-photography-weird-Favim.com-260366.jpg',
+'https://s-media-cache-ak0.pinimg.com/originals/64/05/70/64057035233af7bc960c89bd440d6291.jpg',
+'https://s-media-cache-ak0.pinimg.com/originals/29/21/e1/2921e15516c83637bff59b354c9a0953.jpg',
+'http://68.media.tumblr.com/0a7bdbb6c8c5c90e8b74509f26278c93/tumblr_nd4yfaWma01sjxmpeo1_500.jpg',
+'https://storage.googleapis.com/imgfave/image_cache/1416892898970435.jpg',
+'http://68.media.tumblr.com/tumblr_ma2gu1t5Se1qhv2t7o1_500.jpg',
+'https://s-media-cache-ak0.pinimg.com/originals/3c/98/7b/3c987b4a025aade603fdc3352947ee6e.gif',
+'https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/3/2/16/enhanced-buzz-8526-1362260533-1.jpg',
+'http://media.tumblr.com/tumblr_maus7qUemY1qcvet1.jpg',
+'https://s-media-cache-ak0.pinimg.com/originals/cb/08/aa/cb08aad62999833c3bed8ef5e5e10d03.png',
+'http://24.media.tumblr.com/c3762c906d58964fc8774e975744dcd9/tumblr_my1az0m3kd1shf8zxo1_400.gif'];
 
-
+//'http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg'
 function myTimer(){
 	var images = document.getElementsByTagName('img');
 	for (var i = 0, l = images.length; i < l; i++) {
-  		images[i].src = 'http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg' ;
+  		images[i].src =  GetMeCatOptions();
 	}
+}
+//gives a random cat from the array
+function GetMeCatOptions(){
+	var index= (Math.floor((Math.random()*(catoptions.length))+1))
+	return catoptions[index];
 }
