@@ -42,20 +42,20 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'http://24.media.tumblr.com/c3762c906d58964fc8774e975744dcd9/tumblr_my1az0m3kd1shf8zxo1_400.gif'];
 
 //'http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg'
-var bool = true;
-myTimer().addEventListener("keydown", change() );
+//var bool = true;
+//myTimer().addEventListener("keydown", change() );
 
-function change(){
-	bool = false;
-}
+//function change(){
+//	bool = false;
+//}
 
 function myTimer(){
-	while(bool){
+//	while(bool){
 		var images = document.getElementsByTagName('img');
 		for (var i = 0, l = images.length; i < l; i++) {
   			images[i].src =  GetMeCatOptions();
 		}
-	}
+//	}
 }
 //gives a random cat from the array
 function GetMeCatOptions(){
