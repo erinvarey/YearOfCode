@@ -46,9 +46,12 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 //myTimer().addEventListener("keydown", change() );
 
 //function change(){
-//	bool = false;
-//}
-
+	bool = true;
+//object.addEventListener("click", );
+document.getElementById("myBtn").onclick = bool=false;
+function myFunction() {
+    alert("I do the thing");
+}
 function myTimer(){
 //	while(bool){
 		var images = document.getElementsByTagName('img');
