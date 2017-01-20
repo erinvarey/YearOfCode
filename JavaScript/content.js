@@ -41,25 +41,22 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'https://s-media-cache-ak0.pinimg.com/originals/cb/08/aa/cb08aad62999833c3bed8ef5e5e10d03.png',
 'http://24.media.tumblr.com/c3762c906d58964fc8774e975744dcd9/tumblr_my1az0m3kd1shf8zxo1_400.gif'];
 
-//'http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg'
-//var bool = true;
-//myTimer().addEventListener("keydown", change() );
-
-//function change(){
-	bool = true;
+var bool = true;
 //object.addEventListener("click", );
-document.getElementById("myBtn").onclick = bool=false;
+$('myBtn').onclick(bool=false);
+//document.getElementById("myBtn").onclick = (bool=false);
+console.log(bool);
 function myFunction() {
     alert("I do the thing");
 }
 function myTimer(){
-//	while(bool){
+	//while(bool){
 		var images = document.getElementsByTagName('img');
 		for (var i = 0, l = images.length; i < l; i++) {
   			images[i].src =  GetMeCatOptions();
 		}
-//	}
-}
+	}
+//}
 //gives a random cat from the array
 function GetMeCatOptions(){
 	var index= (Math.floor((Math.random()*(catoptions.length))+1))
