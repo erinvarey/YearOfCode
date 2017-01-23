@@ -1,5 +1,8 @@
 //reloads source code every 5 seconds to dynamically load
 //document.write("Script/jquery.min.js'></script>");
+//$(document).jQuery(document).ready(function($) {
+//	
+//});
 var images = document.getElementsByTagName('img');
 var Timer = setInterval(myTimer, 5000);
 var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
@@ -46,9 +49,13 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 //object.addEventListener("click", );
 //$(document).ready(function(bool){
 //	var bool=true;
-	$("#myBtn").click(function() {
-  alert( "Handler for .click() called." );
-});
+document.getElementById("#myBtn").onclick= EventHandle();
+function EventHandle(){
+	alert( "Handler for .click() called." );
+}
+//	$("#myBtn").click(function() {
+  //alert( "Handler for .click() called." );
+//});
 		//if(bool=true){
 		//	bool=false;
 		//}
@@ -76,6 +83,6 @@ function myTimer(bool){
 //}
 //gives a random cat from the array
 function GetMeCatOptions(){
-	var index= (Math.floor((Math.random()*(catoptions.length))+1))
+	var index= (Math.floor((Math.random()*(catoptions.length))+1));
 	return catoptions[index];
 }
