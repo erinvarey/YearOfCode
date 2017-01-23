@@ -1,5 +1,5 @@
 //reloads source code every 5 seconds to dynamically load
-document.write("Script/jquery.min.js'></script>");
+//document.write("Script/jquery.min.js'></script>");
 var images = document.getElementsByTagName('img');
 var Timer = setInterval(myTimer, 5000);
 var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
@@ -46,7 +46,9 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 //object.addEventListener("click", );
 //$(document).ready(function(bool){
 //	var bool=true;
-//	$("#myBtn").onclick(function(bool){
+	$("#myBtn").click(function() {
+  alert( "Handler for .click() called." );
+});
 		//if(bool=true){
 		//	bool=false;
 		//}
