@@ -1,8 +1,3 @@
-//reloads source code every 5 seconds to dynamically load
-//document.write("Script/jquery.min.js'></script>");
-//$(document).jQuery(document).ready(function($) {
-//	
-//});
 var images = document.getElementsByTagName('img');
 var Timer = setInterval(myTimer, 5000);
 var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
@@ -45,13 +40,17 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'https://s-media-cache-ak0.pinimg.com/originals/cb/08/aa/cb08aad62999833c3bed8ef5e5e10d03.png',
 'http://24.media.tumblr.com/c3762c906d58964fc8774e975744dcd9/tumblr_my1az0m3kd1shf8zxo1_400.gif'];
 
-//var bool = true;
-//object.addEventListener("click", );
-//$(document).ready(function(bool){
-//	var bool=true;
-document.getElementById("#myBtn").onclick= EventHandle();
+$(document).on('click','#button_submit',function() {
+    alert("Hello World");
+});   
+//var bool=false;
+//if (document.getElementById("button_submit").onclick){
+//	bool = true;
+//	console.log("I worked");
+//}
+//document.getElementById("button_submit").onclick;
 function EventHandle(){
-	alert( "Handler for .click() called." );
+	alert("I worked");
 }
 //	$("#myBtn").click(function() {
   //alert( "Handler for .click() called." );
