@@ -43,15 +43,16 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 $(document).on('click','#button_submit',function() {
     alert("Hello World");
 });   
-//var bool=false;
-//if (document.getElementById("button_submit").onclick){
-//	bool = true;
-//	console.log("I worked");
-//}
-//document.getElementById("button_submit").onclick;
-function EventHandle(){
-	alert("I worked");
+document.addEventListener('DOMContentLoaded', init());
+
+function init(){
+    var elem = document.getElementById('button_submit');
+    elem.addEventListener('click',func());
 }
+function func(){
+    alert('button clicked');
+}
+
 //	$("#myBtn").click(function() {
   //alert( "Handler for .click() called." );
 //});
