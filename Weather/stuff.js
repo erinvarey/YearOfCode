@@ -16,3 +16,16 @@ $(document).ready(function() {
     }
   });
 });
+
+/*
+I want this to let me know what weather will actually feel like based on the number
+below 0 will need winter coat
+below -15 will need extra layers and coat
+between 0-5 jacket still
+5-10 light jacket
+10-15 sweater
+anything above your good
+
+Also want it to account for rain and windchill if possible
+
+*\
