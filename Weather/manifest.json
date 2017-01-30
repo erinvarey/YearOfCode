@@ -21,7 +21,7 @@
 
     //"css": ["styles.css"],
   //  "js": ["js/jquery-1.10.2.js"],
-    "js": ["jquery-3.1.1.js","stuff.js"],
+    "js": ["jquery-3.1.1.js","jquery.simpleWeather.js","jquery.simpleWeather.min.js","gulpfile.js","stuff.js"],
     //what web pages this operates on
     "matches": ["*://*/*"]
   }]
