@@ -1,0 +1,30 @@
+//this chunk is what you need for a chrome extension
+//taking it back to the basics i will figure out buttons
+{
+  "manifest_version": 2,
+ 
+  "name": "Erin re-learns html",
+  "version": "0.1.0",
+  "description": "HTML, CSS, Javascript stuff",
+//the little pop up in the browser
+"browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "theHTML.html",
+    "default_title": "Learning stuff"
+  },
+  //what lets you read a pages html
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+//all the sxripy you use
+  "content_scripts": [{
+
+    //"css": ["styles.css"],
+  //  "js": ["js/jquery-1.10.2.js"],
+    "js": ["jquery-3.1.1.js","practice.js"],
+    //what web pages this operates on
+    "matches": ["*://*/*"]
+  }]
+ 
+}
