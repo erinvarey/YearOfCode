@@ -1,5 +1,8 @@
 var images = document.getElementsByTagName('img');
 var Timer = setInterval(myTimer, 5000);
+var myAudio = new Audio();        // create the audio object
+myAudio.src = "cows  cows  cows.mp3"; // assign the audio file to its src
+myAudio.play(); 
 var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
 'https://s-media-cache-ak0.pinimg.com/originals/0d/94/9b/0d949b3d4c5990223dcfa424aaa0e609.jpg',
 'http://www.somuchviral.com/wp-content/uploads/2014/03/sombrero-wearing-cat.jpg',
@@ -39,12 +42,11 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'http://media.tumblr.com/tumblr_maus7qUemY1qcvet1.jpg',
 'https://s-media-cache-ak0.pinimg.com/originals/cb/08/aa/cb08aad62999833c3bed8ef5e5e10d03.png',
 'http://24.media.tumblr.com/c3762c906d58964fc8774e975744dcd9/tumblr_my1az0m3kd1shf8zxo1_400.gif'];
-
-$(document).on('click','#button_submit',function() {
-    alert("Hello World");
-});   
-document.addEventListener('DOMContentLoaded', init());
-
+//
+//$(document).on('click','#button_submit',function() {
+ //   alert("Hello World");
+//});   
+//
 function init(){
     var elem = document.getElementById('button_submit');
     elem.addEventListener('click',func());
