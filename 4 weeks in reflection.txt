@@ -1,0 +1,24 @@
+Year of Code Reflection # 2:
+
+It's been a little over a month of year of code and it's going a lot differently than expected.
+I've managed to accomplish a lot of small projects and I'm starting to feel pretty comfortable
+with a lot of web development. I'm also starting to look into publishing some of these small
+projects so I can track downloads and know that others are using what I'm making. I may create
+my own website to continue to expand in this area. I experienced a little bit of a lull in
+motivation this period but I still forced myself to code and now I find that it really relaxes
+me to create some of the things i've been working on. This year I hopefully plan to
+
+Learn lots of web dev
+get pretty good with Javascripts and its variants
+learn j query
+learn php
+start exploring app development
+make this I can put in a portfolio
+
+So far I've learned javascript. I'm in the process of learnign j query but its proving to be
+difficult to practice in chrome extensions due to installion issues. I'm going to put sombrero
+cat in the chrome store but I'm not quite sure that's something I want to show off. I really
+need to work on my idea list so I can create some things that both inspire me, entertain me,
+and arn't embaressing to show an employer.
+
+Wish me luck!
