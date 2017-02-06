@@ -36,7 +36,10 @@ public class PlayingWithRobot {
 					Robot robot = new Robot();
             	robot.delay(10000);
             		int mask = InputEvent.BUTTON1_MASK;
-            		robot.mouseMove(300, 500);           
+            		int xlocation = location()+250;
+            		int ylocation = location()+420;
+            		robot.mouseMove(xlocation, ylocation);
+            		robot.delay(location()*10);
             		robot.mousePress(mask);     
             		robot.mouseRelease(mask);
 
@@ -50,4 +53,8 @@ public class PlayingWithRobot {
          timer.schedule(task, 0, 10000);
 
 }
+	public static int location(){
+		int location = (int) (Math.floor(Math.random() * 101));
+		return location;
+	}
 }
