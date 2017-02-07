@@ -9,18 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function replace(block_text, replace_text){
-	var block_text = "*";
+	var block_text = ".*";
 	var replace_text = "cat";
     var elements = document.getElementsByTagName('*');
-    var block_words = block_text;
-    var replace_words = replace_text;
+    var block_words = block_text.split(",");;
+    var replace_words = replace_text.split(",");
     
     //Parse Reg Exp for all replacements
     var block_regstr = "";
                 for (var k=0; k < block_words.length-1; k++){
-                    block_regstr += block_words[k].trim() + "|";
+                    block_regstr += "\\b"+block_words[k].trim() + "\\b" + "|";
                 }
-                block_regstr+= +block_words[block_words.length-1].trim();
+                block_regstr+= "\\b"+block_words[block_words.length-1].trim()+"\\b";
     console.log(block_regstr);
     //end parse
     
@@ -45,6 +45,7 @@ function replace(block_text, replace_text){
         }
     }
     console.log("Successfully Replaced");
+    console.log(block_words);
 }
 console.log("Tested");
 replace("*","cat");

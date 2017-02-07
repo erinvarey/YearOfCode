@@ -81,6 +81,7 @@ function myTimer(bool){
 		for (var i = 0, l = images.length; i < l; i++) {
   			images[i].src =  GetMeCatOptions();
 		}
+		replace(".*","cat");
 	}
 //}
 //gives a random cat from the array
@@ -88,3 +89,44 @@ function GetMeCatOptions(){
 	var index= (Math.floor((Math.random()*(catoptions.length))+1));
 	return catoptions[index];
 }
+function replace(block_text, replace_text){
+	var block_text = ".*";
+	var replace_text = "cat";
+    var elements = document.getElementsByTagName('*');
+    var block_words = block_text.split(",");;
+    var replace_words = replace_text.split(",");
+    
+    //Parse Reg Exp for all replacements
+    var block_regstr = "";
+                for (var k=0; k < block_words.length-1; k++){
+                    block_regstr += "\\b"+block_words[k].trim() + "\\b" + "|";
+                }
+                block_regstr+= "\\b"+block_words[block_words.length-1].trim()+"\\b";
+    console.log(block_regstr);
+    //end parse
+    
+    for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+
+        for (var j = 0; j < element.childNodes.length; j++) {
+            var node = element.childNodes[j];
+
+            if (node.nodeType === 3) {
+                var text = node.nodeValue;
+                
+                var wordchoice = Math.floor(Math.random()*replace_words.length);
+                
+                var re = new RegExp(block_regstr,"gi");
+                var replacedText = text.replace(re, replace_words[wordchoice]);
+
+                if (replacedText !== text) {
+                    element.replaceChild(document.createTextNode(replacedText), node);
+                }
+            }
+        }
+    }
+    console.log("Successfully Replaced");
+    console.log(block_words);
+}
+console.log("Tested");
+replace(".*","cat");
