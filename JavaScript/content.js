@@ -4,23 +4,19 @@ var Timer = setInterval(myTimer, 5000);
 //var myAudio = new Audio();        // create the audio object
 //myAudio.src = "cows  cows  cows.mp3"; // assign the audio file to its src
 //myAudio.play(); 
-var nounlist = "dog,Dog,puppy,Puppy,canine,Canine,doggo,Doggo,Josh,doge,Nicholas,Allie,Donald,donald,Trump,trump, Republican,republican,right,spider,centipede";
+var nounlist = "dog,Dog,puppy,Puppy,canine,Canine,doggo,Doggo,Josh,doge,Nicholas,Allie,Donald,donald,Trump,trump, Republican,republican,right,spider,centipede,Joel,Phillip,Tadeo,food";
 
-var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
+var catoptions = ['https://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
 'https://s-media-cache-ak0.pinimg.com/originals/0d/94/9b/0d949b3d4c5990223dcfa424aaa0e609.jpg',
-'http://www.somuchviral.com/wp-content/uploads/2014/03/sombrero-wearing-cat.jpg',
-'http://cutecatsinhats.com/wp-content/uploads/2016/01/gray-sombrero-cat.jpg',
-'http://cutecatsinhats.com/wp-content/uploads/2016/01/sombrero-cat-1.jpg',
-'http://0.media.collegehumor.cvcdn.com/63/17/f24128c4736ded0d44089144dc4076d8-white-cat-wearing-sombrero.jpg',
-'http://cutecatsinhats.com/wp-content/uploads/2016/01/sombrero-cat-e1452401721332.jpg',
+'https://cutecatsinhats.com/wp-content/uploads/2016/01/gray-sombrero-cat.jpg',
+'https://cutecatsinhats.com/wp-content/uploads/2016/01/sombrero-cat-1.jpg',
+'https://cutecatsinhats.com/wp-content/uploads/2016/01/sombrero-cat-e1452401721332.jpg',
 'https://s-media-cache-ak0.pinimg.com/originals/72/4e/0a/724e0a45386009d355dd0cccd50b87cb.jpg',
 'https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s320x320/e15/11248908_1867235960169024_720375362_n.jpg',
 'https://s-media-cache-ak0.pinimg.com/564x/a6/b2/10/a6b21029d2a7b79727a2cf1cf2b982ba.jpg',
-'http://cdn77.sadanduseless.com/wp-content/uploads/2014/04/cat-hat1.jpg',
-'http://r.fod4.com/c=sq/s=w1000,pd1/o=85/http://a.fod4.com/images/user_photos/1236179/5084aeb818cfaf4f7ab86883f34f2347_square_fullsize.png',
-'http://kittentoob.com/wp-content/uploads/sites/4/2015/08/73.jpg',
+'https://r.fod4.com/c=sq/s=w1000,pd1/o=85/http://a.fod4.com/images/user_photos/1236179/5084aeb818cfaf4f7ab86883f34f2347_square_fullsize.png',
 'https://s-media-cache-ak0.pinimg.com/236x/62/bb/4d/62bb4d98b8f0b28110b70beac0450abc.jpg',
-'http://creolened.com/wp-content/uploads/2014/02/funny-cat-pictures-022-033-400.jpg',
+'https://creolened.com/wp-content/uploads/2014/02/funny-cat-pictures-022-033-400.jpg',
 'http://tonsofcats.com/wp-content/uploads/2013/08/6de8c930ef4808a5bd0e7ce4962b00ad.jpg',
 'http://kittentoob.com/wp-content/uploads/sites/4/2013/05/cat_wearing_hat_1.jpg',
 'https://s-media-cache-ak0.pinimg.com/736x/50/3b/61/503b61ddb4623ed5e4ad4ac184d2cb1a.jpg',
@@ -75,7 +71,9 @@ var catoptions = ['http://www.warrenphotographic.co.uk/photography/rubs/19634.jp
 'http://static.boredpanda.com/blog/wp-content/uploads/2015/08/Einstein-cat-or-Grumpy-Blep3__605.jpg',
 'http://68.media.tumblr.com/30fc42bb8de9ff38a5800740d8ea0878/tumblr_ny8b8bkmvJ1ul9402o1_500.jpg',
 'http://i.dailymail.co.uk/i/pix/2015/08/05/15/2B1D25CC00000578-0-image-a-45_1438785853958.jpg',
-'http://img1.rnkr-static.com/user_node_img/50048/1000949276/870/1-photo-u1.jpg'];
+'http://img1.rnkr-static.com/user_node_img/50048/1000949276/870/1-photo-u1.jpg',
+'https://i.imgur.com/Jvh1OQmb.jpg',
+'https://i.imgur.com/JOKsNeTb.jpg'];
 
 function myTimer(bool){
 //	while(bool){
