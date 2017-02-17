@@ -4,8 +4,8 @@ var Timer = setInterval(myTimer, 5000);
 //var myAudio = new Audio();        // create the audio object
 //myAudio.src = "cows  cows  cows.mp3"; // assign the audio file to its src
 //myAudio.play(); 
-var capitalnounlist = "Dog,Puppy,Canine,Doggo,Josh,Nicholas,Allie,Donald,Trump,Republican,Right,Spider,Centipede,Joel,Phillip,Phil,Tadeo,Food";
-var lowernounlist = "dog,puppy,canine,doggo,doge,josh,nicholas,nick,allie,donald,trump,republican,right,spider,centipede,Joel,phil,phillip,food"
+var capitalnounlist = "Dog,Puppy,Canine,Doggo,Josh,Nicholas,Allie,Donald,Trump,Republican,Right,Spider,Centipede,Joel,Phillip,Phil,Tadeo,Food,Dogs";
+var lowernounlist = "dog,puppy,canine,doggo,doge,josh,nicholas,nick,allie,donald,trump,republican,right,spider,centipede,joel,phil,phillip,food,dogs"
 var catoptions = ['https://www.warrenphotographic.co.uk/photography/rubs/19634.jpg',
 'https://s-media-cache-ak0.pinimg.com/originals/0d/94/9b/0d949b3d4c5990223dcfa424aaa0e609.jpg',
 'https://cutecatsinhats.com/wp-content/uploads/2016/01/gray-sombrero-cat.jpg',
@@ -72,7 +72,8 @@ function myTimer(bool){
 		for (var i = 0, l = images.length; i < l; i++) {
   			images[i].src =  GetMeCatOptions();
 		}
-		replace(nounlist,"cat");
+		replace(capitalnounlist,"Cat");
+        replace(lowernounlist,"cat");
 	}
 //}
 //gives a random cat from the array
@@ -117,7 +118,7 @@ function replace(block_text, replace_text){
         }
     }
     console.log("Successfully Replaced");
-    console.log(block_words);
+    console.log(block_words+replace_words);
 }
 console.log("Tested");
 replace("capitalnounlist","Cat");
