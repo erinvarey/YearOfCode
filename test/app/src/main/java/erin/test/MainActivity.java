@@ -20,4 +20,7 @@ public class MainActivity extends AppCompatActivity {
         myToast.show();
 
     }
+    public void password(){
+
+    }
 }
