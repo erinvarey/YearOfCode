@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:id="@+id/textView" />
 
     <Button
         android:id="@+id/TapMe"
@@ -24,5 +25,15 @@
         android:layout_centerHorizontal="true"
         android:onClick="onButtonTap"
         android:text="@string/tapme" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginBottom="89dp"
+        android:text="New Page If You Click!" />
 
 </RelativeLayout>
