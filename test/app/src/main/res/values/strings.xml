@@ -3,4 +3,5 @@
     <string name="HelloWorld">Tap me if you dare</string>
     <string name="tapme">TapMe</string>
     <string name="button">New Page If You Click!</string>
+    <string name="editText">Password</string>
 </resources>
