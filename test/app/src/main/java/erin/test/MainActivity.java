@@ -29,20 +29,20 @@ public class MainActivity extends AppCompatActivity {
     //Assign a listener to your button
       //  button.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, secondactivity.class);
+            startActivity(intent);
             //Start your second activity
-            if(password.equals("GIVEMEDOGGO")) {
-                Intent intent = new Intent(MainActivity.this, secondactivity.class);
-                startActivity(intent);
+         //   if(password.equals("GIVEMEDOGGO")) {
+           //     Intent intent = new Intent(MainActivity.this, secondactivity.class);
+             //   startActivity(intent);
 
-            }
-            else{
-                Toast myToast = Toast.makeText(
-                        getApplicationContext(),
-                        "Please Try again",
-                        Toast.LENGTH_LONG);
-                myToast.show();
-
-            }
+            //}
+            //else{
+              //  Toast myToast = Toast.makeText(
+                //        getApplicationContext(),
+                  //      "Please Try again",
+                    //    Toast.LENGTH_LONG);
+               // myToast.show();
 
         }
     }
