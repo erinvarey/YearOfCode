@@ -9,12 +9,15 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
     public void onButtonTap(View v){
+        Intent intent = new Intent(MainActivity.this, thirdactivity.class);
+        startActivity(intent);
         password = (EditText) findViewById(R.id.editText);
         Toast myToast = Toast.makeText(
                 getApplicationContext(),
@@ -45,5 +48,7 @@ public class MainActivity extends AppCompatActivity {
                // myToast.show();
 
         }
+
+
     }
 

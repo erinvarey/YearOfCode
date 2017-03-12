@@ -1,4 +1,4 @@
-package erin.test.thirdactivity;
+package erin.test;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -43,16 +43,15 @@ public class thirdactivity extends AppCompatActivity{
                 return b2;
             }
         }
-        public void onClick(View v){
+        public void ClickMethod(View v) {
 
-            if(b1&&b2){
+            if (b1 && b2) {
                 Toast myToast = Toast.makeText(
                         getApplicationContext(),
                         "correct",
                         Toast.LENGTH_LONG);
                 myToast.show();
-            }
-            else{
+            } else {
                 Toast myToast = Toast.makeText(
                         getApplicationContext(),
                         "strike one",
