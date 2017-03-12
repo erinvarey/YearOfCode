@@ -4,9 +4,34 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/wordcheck"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text" />
+
+    <TextView
+        android:id="@+id/word1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="assuming" />
+
+    <EditText
+        android:id="@+id/wordcheck1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="difficult" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enter" />
 </LinearLayout>

@@ -6,4 +6,7 @@
     <string name="editText">Password</string>
     <string name="button3"></string>
     <string name="textcheck"></string>
+    <string name="wordcheck"></string>
+    <string name="wordcheck1"></string>
+    <string name="button4">Enter</string>
 </resources>
