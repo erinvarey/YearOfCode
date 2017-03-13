@@ -13,17 +13,20 @@ import erin.test.R;
  */
 
 public class thirdactivity extends AppCompatActivity{
-        private EditText wordcheck;
-        private EditText wordcheck1;
+        public EditText wordcheck;
+        public EditText wordcheck1;
         public boolean b1=false;
         public boolean b2=false;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.thirdactivity);
+            wordcheck =  (EditText) findViewById(R.id.wordcheck);
+            wordcheck1 =  (EditText) findViewById(R.id.wordcheck1);
+
         }
         public boolean wordcheck(String s){
-            if(wordcheck.equals("assuming")){
+            if(s.equals("assuming")){
                 b1=true;
                 return b1;
             }
@@ -34,7 +37,7 @@ public class thirdactivity extends AppCompatActivity{
 
         }
         public boolean wordcheck1(String s){
-            if(wordcheck1.equals("difficult")){
+            if(s.equals("difficult")){
                 b2=true;
                 return b2;
             }
@@ -44,7 +47,10 @@ public class thirdactivity extends AppCompatActivity{
             }
         }
         public void ClickMethod(View v) {
-
+            String a= wordcheck.getText().toString();
+            String b= wordcheck1.getText().toString();
+            boolean b1= wordcheck(a);
+            boolean b2= wordcheck1(b);
             if (b1 && b2) {
                 Toast myToast = Toast.makeText(
                         getApplicationContext(),
@@ -57,7 +63,8 @@ public class thirdactivity extends AppCompatActivity{
                         "strike one",
                         Toast.LENGTH_LONG);
                 myToast.show();
-            }
+                }
+
         }
 
 }
