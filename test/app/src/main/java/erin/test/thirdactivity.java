@@ -51,19 +51,46 @@ public class thirdactivity extends AppCompatActivity{
             String b= wordcheck1.getText().toString();
             boolean b1= wordcheck(a);
             boolean b2= wordcheck1(b);
+            int count =0;
             if (b1 && b2) {
                 Toast myToast = Toast.makeText(
                         getApplicationContext(),
                         "correct",
                         Toast.LENGTH_LONG);
                 myToast.show();
-            } else {
+            } else if((b1 & b2 == false)&& (count==0)){
+                count++;
                 Toast myToast = Toast.makeText(
                         getApplicationContext(),
                         "strike one",
                         Toast.LENGTH_LONG);
                 myToast.show();
                 }
+            else if((b1 & b2 == false)&& (count==1)){
+                count++;
+                Toast myToast = Toast.makeText(
+                        getApplicationContext(),
+                        "strike two",
+                        Toast.LENGTH_LONG);
+                myToast.show();
+            }
+            else if((b1 & b2 == false)&& (count==2)){
+                count++;
+                Toast myToast = Toast.makeText(
+                        getApplicationContext(),
+                        "last try",
+                        Toast.LENGTH_LONG);
+                myToast.show();
+            }
+            else{
+                count++;
+                Toast myToast = Toast.makeText(
+                        getApplicationContext(),
+                        "You fail",
+                        Toast.LENGTH_LONG);
+                myToast.show();
+            }
+
 
         }
 
