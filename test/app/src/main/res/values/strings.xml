@@ -9,4 +9,5 @@
     <string name="wordcheck"></string>
     <string name="wordcheck1"></string>
     <string name="button4">Enter</string>
+    <string name="progressBar"></string>
 </resources>
