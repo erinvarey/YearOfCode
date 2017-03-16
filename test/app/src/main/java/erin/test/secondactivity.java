@@ -52,6 +52,8 @@ public class secondactivity extends AppCompatActivity {
         if (count ==10){
             one="....";
             count =0;
+            Intent intent = new Intent(secondactivity.this, thirdactivity.class);
+            startActivity(intent);
         }
         Toast myToast = Toast.makeText(
                 getApplicationContext(),

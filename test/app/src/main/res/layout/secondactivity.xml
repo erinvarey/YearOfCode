@@ -39,6 +39,5 @@
         android:layout_marginTop="92dp"
         android:background="@android:color/transparent"
         android:onClick="onClick"
-        android:text='""'
         android:visibility="visible" />
 </RelativeLayout>
