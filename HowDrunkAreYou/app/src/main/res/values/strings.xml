@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">How Drunk Are You?</string>
+    <string name="Testone"></string>
+    <string name="button">Begin Test</string>
+    <string name="button2">Update Whoes Coming to Get You</string>
+    <string name="Submit">Submit</string>
 </resources>
