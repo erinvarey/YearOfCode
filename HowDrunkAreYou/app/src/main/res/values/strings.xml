@@ -4,4 +4,6 @@
     <string name="button">Begin Test</string>
     <string name="button2">Update Whoes Coming to Get You</string>
     <string name="Submit">Submit</string>
+    <string name="Testtwo">Enter the sentance above here</string>
+    <string name="Submit2">Submit</string>
 </resources>
