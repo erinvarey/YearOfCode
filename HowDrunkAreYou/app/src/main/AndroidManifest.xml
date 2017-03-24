@@ -20,6 +20,12 @@
         <activity android:name=".spellingtest">
             android:name=".MyApplication"
         </activity>
+        <activity android:name=".spellingtest2">
+            android:name=".MyApplication"
+        </activity>
+        <activity android:name=".spellingtest3">
+            android:name=".MyApplication"
+        </activity>
     </application>
 
 </manifest>

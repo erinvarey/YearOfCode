@@ -8,30 +8,32 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * Created by Erin on 22/03/2017.
+ * Created by Erin on 23/03/2017.
  */
 
-public class spellingtest2  extends AppCompatActivity {
-    private EditText Testtwo;
+public class spellingtest5 extends AppCompatActivity {
+    private EditText Testfive;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.spellingtest2);
-        Testtwo = (EditText) findViewById(R.id.Testtwo);
+        setContentView(R.layout.spellingtest5);
+        Testfive = (EditText) findViewById(R.id.Testfive);
     }
-    public void SpellingSubmitTwo(View v) {
-        String a= Testtwo.getText().toString();
-        Integer count =0;
+
+    public void SpellingSubmitFive(View v) {
+        String a = Testfive.getText().toString();
+        Integer count = 0;
         //you got it right, get a point and move to next sentance
-        if(a.equals("She sells sea shell by the sea shore")) {
-            Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
-            startActivity(intent);
+        if (a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus")) {
+          //  Intent intent = new Intent(spellingtest5.this, ReactionTest.class);
+          //  startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
             //increments correctness counter. The range of scores well determine how drunk you are
             MainActivity.SpellingCorrect++;
         }
         //first try is wrong but you get two
-        else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==0)){
+        else if ((a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus") == false) && (count == 0)) {
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
                     "Please Try again",
@@ -40,12 +42,13 @@ public class spellingtest2  extends AppCompatActivity {
             count++;
         }
         //failed second try move on to next phrase
-        else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==1)){
-            Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
-           startActivity(intent);
+        else if ((a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus") == false) && (count == 1)) {
+           // Intent intent = new Intent(spellingtest5.this, spellingtest5.class);
+            //startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
             MainActivity.SpellingCorrect++;
         }
 
     }
 }
+

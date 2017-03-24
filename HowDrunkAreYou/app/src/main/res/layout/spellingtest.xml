@@ -48,5 +48,6 @@
         android:layout_below="@+id/Testone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="94dp"
+        android:onClick="SpellingSubmitOne"
         android:text="Submit" />
 </RelativeLayout>
