@@ -26,25 +26,23 @@ public class spellingtest extends AppCompatActivity {
         if(a.equals("This first sentence is going to be easy")) {
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);
             startActivity(intent);
-            //((MyApplication) this.getApplication()).setSpellingCorrect(1);
             //increments correctness counter. The range of scores well determine how drunk you are
             MainActivity.SpellingCorrect++;
         }
         //first try is wrong but you get two
-        else if((a.equals("This first sentence is going to be easy")==false)&&(count==0)){
+        if((a.equals("This first sentence is going to be easy"))&&(count==0)){
+            count++;
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
                     "Please Try again",
                     Toast.LENGTH_LONG);
             myToast.show();
-            count++;
+
         }
         //failed second try move on to next phrase
-        else if((a.equals("This first sentence is going to be easy")==false)&&(count==1)){
+        else{
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);
             startActivity(intent);
-            //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-            MainActivity.SpellingCorrect++;
         }
 
     }

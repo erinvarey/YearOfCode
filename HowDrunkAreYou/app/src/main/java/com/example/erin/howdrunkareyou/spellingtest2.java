@@ -11,7 +11,7 @@ import android.widget.Toast;
  * Created by Erin on 22/03/2017.
  */
 
-public class spellingtest2  extends AppCompatActivity {
+public class spellingtest2 extends AppCompatActivity {
     private EditText Testtwo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class spellingtest2  extends AppCompatActivity {
             Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
            startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-            MainActivity.SpellingCorrect++;
+           // MainActivity.SpellingCorrect++;
         }
 
     }

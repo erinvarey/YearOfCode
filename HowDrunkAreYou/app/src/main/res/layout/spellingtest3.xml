@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="63dp"
-        android:text="isn't it harder, with &^ symbols and (punctuation)"
+        android:text="isn't it harder, with ^ symbols and (punctuation)"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="24sp" />
