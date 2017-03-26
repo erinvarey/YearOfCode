@@ -30,7 +30,7 @@ public class spellingtest extends AppCompatActivity {
             MainActivity.SpellingCorrect++;
         }
         //first try is wrong but you get two
-        if((a.equals("This first sentence is going to be easy"))&&(count==0)){
+        else if((a.equals("This first sentence is going to be easy")==false)&&(count==0)){
             count++;
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
