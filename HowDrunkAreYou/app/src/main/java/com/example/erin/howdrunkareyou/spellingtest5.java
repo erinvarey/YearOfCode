@@ -30,7 +30,7 @@ public class spellingtest5 extends AppCompatActivity {
           //  startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
             //increments correctness counter. The range of scores well determine how drunk you are
-            MainActivity.SpellingCorrect++;
+        //    MainActivity.SpellingCorrect++;
         }
         //first try is wrong but you get two
         else if ((a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus") == false) && (count == 0)) {
@@ -46,7 +46,7 @@ public class spellingtest5 extends AppCompatActivity {
            // Intent intent = new Intent(spellingtest5.this, spellingtest5.class);
             //startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-            MainActivity.SpellingCorrect++;
+          //  MainActivity.SpellingCorrect++;
         }
 
     }

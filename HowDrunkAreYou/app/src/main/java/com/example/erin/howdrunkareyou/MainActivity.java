@@ -7,15 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public static Integer SpellingCorrect;
 
-    public Integer SpellingCorrect() {
-        return SpellingCorrect;
-    }
-
-    public void SpellingCorrect(Integer SpellingCorrect) {
-        this.SpellingCorrect = SpellingCorrect;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

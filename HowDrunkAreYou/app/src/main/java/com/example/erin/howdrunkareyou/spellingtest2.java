@@ -28,7 +28,7 @@ public class spellingtest2 extends AppCompatActivity {
             startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
             //increments correctness counter. The range of scores well determine how drunk you are
-            MainActivity.SpellingCorrect++;
+           // MainActivity.SpellingCorrect++;
         }
         //first try is wrong but you get two
         else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==0)){

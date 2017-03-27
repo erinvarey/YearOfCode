@@ -13,21 +13,26 @@ import android.widget.Toast;
 
 public class spellingtest extends AppCompatActivity {
     private EditText Testone;
+    static Integer count =0;
+    static Integer s;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spellingtest);
         Testone = (EditText) findViewById(R.id.Testone);
+        s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
+
+
     }
     public void SpellingSubmitOne(View v) {
         String a= Testone.getText().toString();
-        Integer count =0;
         //you got it right, get a point and move to next sentance
         if(a.equals("This first sentence is going to be easy")) {
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);
             startActivity(intent);
             //increments correctness counter. The range of scores well determine how drunk you are
-            MainActivity.SpellingCorrect++;
+            ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
+          //  MyApplication.SpellingCorrect++;
         }
         //first try is wrong but you get two
         else if((a.equals("This first sentence is going to be easy")==false)&&(count==0)){
