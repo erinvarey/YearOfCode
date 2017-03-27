@@ -7,11 +7,11 @@ import android.app.Application;
  */
 
 public class MyApplication extends Application {
-    public static Integer SpellingCorrect;
-    public Integer GetSpellingCorrect() {
+    public static Integer SpellingCorrect=0;
+    public static Integer GetSpellingCorrect() {
         return SpellingCorrect;
     }
-    public void SetSpellingCorrect(Integer SpellingCorrect) {
-        this.SpellingCorrect = SpellingCorrect;
+    public static void SetSpellingCorrect(Integer SpellingCorrectNew) {
+        SpellingCorrect = SpellingCorrectNew;
     }
 }

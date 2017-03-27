@@ -13,11 +13,13 @@ import android.widget.Toast;
 
 public class spellingtest3 extends AppCompatActivity {
     private EditText Testthree;
+    static Integer s;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spellingtest3);
         Testthree = (EditText) findViewById(R.id.Testthree);
+        s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
     }
     public void SpellingSubmitThree(View v) {
         String a= Testthree.getText().toString();
@@ -26,9 +28,7 @@ public class spellingtest3 extends AppCompatActivity {
         if(a.equals("isn't it harder, with &^ symbols and (punctuation)")) {
             Intent intent = new Intent(spellingtest3.this, spellingtest4.class);
             startActivity(intent);
-            //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-            //increments correctness counter. The range of scores well determine how drunk you are
-           // MainActivity.SpellingCorrect++;
+            ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
         }
         //first try is wrong but you get two
         else if((a.equals("isn't it harder, with &^ symbols and (punctuation)")==false)&&(count==0)){
@@ -40,11 +40,10 @@ public class spellingtest3 extends AppCompatActivity {
             count++;
         }
         //failed second try move on to next phrase
-        else if((a.equals("isn't it harder, with &^ symbols and (punctuation)")==false)&&(count==1)){
+        else {
             Intent intent = new Intent(spellingtest3.this, spellingtest4.class);
             startActivity(intent);
-            //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-           // MainActivity.SpellingCorrect++;
+
         }
 
     }

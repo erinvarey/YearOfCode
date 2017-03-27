@@ -13,22 +13,23 @@ import android.widget.Toast;
 
 public class spellingtest2 extends AppCompatActivity {
     private EditText Testtwo;
+    static Integer s;
+    Integer count =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spellingtest2);
         Testtwo = (EditText) findViewById(R.id.Testtwo);
+        s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
     }
     public void SpellingSubmitTwo(View v) {
         String a= Testtwo.getText().toString();
-        Integer count =0;
         //you got it right, get a point and move to next sentance
         if(a.equals("She sells sea shell by the sea shore")) {
             Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
             startActivity(intent);
-            //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-            //increments correctness counter. The range of scores well determine how drunk you are
-           // MainActivity.SpellingCorrect++;
+            ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
+
         }
         //first try is wrong but you get two
         else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==0)){
@@ -40,9 +41,9 @@ public class spellingtest2 extends AppCompatActivity {
             count++;
         }
         //failed second try move on to next phrase
-        else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==1)){
+        else{
             Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
-           startActivity(intent);
+            startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
            // MainActivity.SpellingCorrect++;
         }

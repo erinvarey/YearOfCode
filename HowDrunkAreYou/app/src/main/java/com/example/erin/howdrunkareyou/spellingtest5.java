@@ -13,12 +13,14 @@ import android.widget.Toast;
 
 public class spellingtest5 extends AppCompatActivity {
     private EditText Testfive;
+    static Integer s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spellingtest5);
         Testfive = (EditText) findViewById(R.id.Testfive);
+        s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
     }
 
     public void SpellingSubmitFive(View v) {
@@ -26,11 +28,9 @@ public class spellingtest5 extends AppCompatActivity {
         Integer count = 0;
         //you got it right, get a point and move to next sentance
         if (a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus")) {
-          //  Intent intent = new Intent(spellingtest5.this, ReactionTest.class);
+           // Intent intent = new Intent(spellingtest5.this, ReactionTest.class);
           //  startActivity(intent);
-            //((MyApplication) this.getApplication()).setSpellingCorrect(1);
-            //increments correctness counter. The range of scores well determine how drunk you are
-        //    MainActivity.SpellingCorrect++;
+            ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
         }
         //first try is wrong but you get two
         else if ((a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus") == false) && (count == 0)) {
@@ -42,7 +42,7 @@ public class spellingtest5 extends AppCompatActivity {
             count++;
         }
         //failed second try move on to next phrase
-        else if ((a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus") == false) && (count == 1)) {
+        else {
            // Intent intent = new Intent(spellingtest5.this, spellingtest5.class);
             //startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
