@@ -28,8 +28,8 @@ public class spellingtest5 extends AppCompatActivity {
         Integer count = 0;
         //you got it right, get a point and move to next sentance
         if (a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus")) {
-           // Intent intent = new Intent(spellingtest5.this, ReactionTest.class);
-          //  startActivity(intent);
+            Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);
+            startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
         }
         //first try is wrong but you get two
@@ -43,8 +43,8 @@ public class spellingtest5 extends AppCompatActivity {
         }
         //failed second try move on to next phrase
         else {
-           // Intent intent = new Intent(spellingtest5.this, spellingtest5.class);
-            //startActivity(intent);
+            Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);
+            startActivity(intent);
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
           //  MainActivity.SpellingCorrect++;
         }
