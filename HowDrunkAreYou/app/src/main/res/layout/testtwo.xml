@@ -17,14 +17,15 @@
         android:id="@+id/CircleThree"
         android:layout_width="60dp"
         android:layout_height="45dp"
+        android:layout_below="@+id/CircleTwo"
         android:layout_marginLeft="55dp"
         android:layout_marginStart="55dp"
-        android:text='""'
-        android:visibility="invisible"
-        android:layout_below="@+id/CircleTwo"
-        android:layout_toRightOf="@+id/CircleOne"
+        android:layout_marginTop="40dp"
         android:layout_toEndOf="@+id/CircleOne"
-        android:layout_marginTop="40dp" />
+        android:layout_toRightOf="@+id/CircleOne"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/CircleOne"
@@ -36,6 +37,7 @@
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="39dp"
+        android:onClick="GoodClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -43,14 +45,15 @@
         android:id="@+id/CircleTwo"
         android:layout_width="60dp"
         android:layout_height="45dp"
-        android:layout_marginTop="17dp"
-        android:text='""'
-        android:visibility="invisible"
-        android:layout_below="@+id/CircleOne"
-        android:layout_alignRight="@+id/CircleThree"
         android:layout_alignEnd="@+id/CircleThree"
+        android:layout_alignRight="@+id/CircleThree"
+        android:layout_below="@+id/CircleOne"
+        android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginEnd="24dp" />
+        android:layout_marginTop="17dp"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/CircleFour"
@@ -60,6 +63,7 @@
         android:layout_alignRight="@+id/CircleThree"
         android:layout_below="@+id/CircleThree"
         android:layout_marginTop="36dp"
+        android:onClick="GoodClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -73,6 +77,7 @@
         android:layout_marginTop="56dp"
         android:layout_toLeftOf="@+id/CircleFour"
         android:layout_toStartOf="@+id/CircleFour"
+        android:onClick="GoodClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -85,6 +90,7 @@
         android:layout_below="@+id/CircleFour"
         android:layout_marginTop="26dp"
         android:layout_toRightOf="@+id/CircleFive"
+        android:onClick="GoodClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -98,6 +104,7 @@
         android:layout_marginTop="11dp"
         android:layout_toEndOf="@+id/CircleSix"
         android:layout_toRightOf="@+id/CircleSix"
+        android:onClick="GoodClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -109,11 +116,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="11dp"
+        android:layout_toEndOf="@+id/CircleOne"
+        android:layout_toRightOf="@+id/CircleOne"
+        android:onClick="badClick"
         android:text='""'
         android:textColor="@android:color/white"
-        android:visibility="invisible"
-        android:layout_toRightOf="@+id/CircleOne"
-        android:layout_toEndOf="@+id/CircleOne" />
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/BadTwo"
@@ -124,6 +132,7 @@
         android:layout_alignEnd="@+id/CircleSeven"
         android:layout_alignRight="@+id/CircleSeven"
         android:elevation="1dp"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -135,6 +144,7 @@
         android:layout_below="@+id/BadTwo"
         android:layout_toEndOf="@+id/CircleThree"
         android:layout_toRightOf="@+id/CircleThree"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -142,12 +152,13 @@
         android:id="@+id/BadFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='""'
-        android:visibility="invisible"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/CircleSeven"
+        android:layout_below="@+id/BadThree"
         android:layout_toEndOf="@+id/CircleSeven"
-        android:layout_below="@+id/BadThree" />
+        android:layout_toRightOf="@+id/CircleSeven"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/BadFive"
@@ -157,6 +168,7 @@
         android:layout_alignLeft="@+id/CircleOne"
         android:layout_alignStart="@+id/CircleOne"
         android:layout_below="@+id/CircleOne"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -167,6 +179,7 @@
         android:layout_below="@+id/CircleTwo"
         android:layout_toLeftOf="@+id/CircleFour"
         android:layout_toStartOf="@+id/CircleFour"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -177,6 +190,7 @@
         android:layout_alignLeft="@+id/CircleTwo"
         android:layout_alignStart="@+id/CircleTwo"
         android:layout_below="@+id/CircleSix"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -187,6 +201,7 @@
         android:layout_alignLeft="@+id/BadFive"
         android:layout_alignStart="@+id/BadFive"
         android:layout_below="@+id/CircleFive"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -197,6 +212,7 @@
         android:layout_above="@+id/BadEight"
         android:layout_toLeftOf="@+id/CircleFive"
         android:layout_toStartOf="@+id/CircleFive"
+        android:onClick="badClick"
         android:text='""'
         android:visibility="invisible" />
 
@@ -208,5 +224,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/BadThree"
         android:layout_marginTop="11dp"
+        android:onClick="next"
         android:text="Next Task" />
 </RelativeLayout>
