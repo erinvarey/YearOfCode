@@ -199,4 +199,14 @@
         android:layout_toStartOf="@+id/CircleFive"
         android:text='""'
         android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/BadThree"
+        android:layout_marginTop="11dp"
+        android:text="Next Task" />
 </RelativeLayout>

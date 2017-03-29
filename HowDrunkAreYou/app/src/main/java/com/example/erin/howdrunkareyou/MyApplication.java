@@ -14,4 +14,9 @@ public class MyApplication extends Application {
     public static void SetSpellingCorrect(Integer SpellingCorrectNew) {
         SpellingCorrect = SpellingCorrectNew;
     }
+    public static Integer Precision=0;
+    public static Integer getPrecision() { return Precision;}
+    public static void setPrecision(Integer PrecisionNew){
+        Precision= PrecisionNew;
+    }
 }
