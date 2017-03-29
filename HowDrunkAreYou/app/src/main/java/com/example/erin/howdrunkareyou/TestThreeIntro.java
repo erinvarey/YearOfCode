@@ -14,8 +14,8 @@ public class TestThreeIntro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.testthreeintro);
     }
-    public void onClick(View v) {
-      //  Intent intent = new Intent(TestThreeIntro.this, TestThree.class);
-      //  startActivity(intent);
+    public void TestThreeGo(View v) {
+        Intent intent = new Intent(TestThreeIntro.this, TestThree.class);
+        startActivity(intent);
     }
 }

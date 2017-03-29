@@ -19,4 +19,9 @@ public class MyApplication extends Application {
     public static void setPrecision(Integer PrecisionNew){
         Precision= PrecisionNew;
     }
+    public static Integer Math=0;
+    public static Integer getMath() { return Math;}
+    public static void setMath(Integer MathNew){
+        Math= MathNew;
+    }
 }
