@@ -17,5 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="150dp"
+        android:onClick="TheyReady"
         android:text="Ready?" />
 </RelativeLayout>
