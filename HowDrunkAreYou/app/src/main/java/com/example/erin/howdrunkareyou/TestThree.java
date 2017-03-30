@@ -1,7 +1,9 @@
 package com.example.erin.howdrunkareyou;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
 
 /**
@@ -34,5 +36,17 @@ public class TestThree extends AppCompatActivity {
         Boolean answerthree= (num3==47);
 
         return (answerone && answertwo && answerthree);
+    }
+    public void MathDone(View v){
+        if(MathRightOne()){
+            MyApplication.setMath(1);
+            Intent intent = new Intent(TestThree.this, TestFourIntro.class);
+            startActivity(intent);
+        }
+        else{
+            Intent intent = new Intent(TestThree.this, TestFourIntro.class);
+            startActivity(intent);
+        }
+
     }
 }
