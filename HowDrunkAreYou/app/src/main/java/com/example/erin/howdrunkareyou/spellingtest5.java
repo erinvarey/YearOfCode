@@ -14,18 +14,20 @@ import android.widget.Toast;
 public class spellingtest5 extends AppCompatActivity {
     private EditText Testfive;
     static Integer s;
+    Integer count=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spellingtest5);
         Testfive = (EditText) findViewById(R.id.Testfive);
-        s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
+
     }
 
     public void SpellingSubmitFive(View v) {
         String a = Testfive.getText().toString();
-        Integer count = 0;
+        s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
         //you got it right, get a point and move to next sentance
         if (a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus")) {
             Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);

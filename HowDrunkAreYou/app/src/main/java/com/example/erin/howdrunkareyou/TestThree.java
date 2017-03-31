@@ -40,11 +40,11 @@ public class TestThree extends AppCompatActivity {
     public void MathDone(View v){
         if(MathRightOne()){
             MyApplication.setMath(1);
-            Intent intent = new Intent(TestThree.this, TestFourIntro.class);
+            Intent intent = new Intent(TestThree.this, Results.class);
             startActivity(intent);
         }
         else{
-            Intent intent = new Intent(TestThree.this, TestFourIntro.class);
+            Intent intent = new Intent(TestThree.this, Results.class);
             startActivity(intent);
         }
 

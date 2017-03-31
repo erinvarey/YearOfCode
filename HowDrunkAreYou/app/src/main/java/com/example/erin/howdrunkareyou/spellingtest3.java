@@ -14,24 +14,26 @@ import android.widget.Toast;
 public class spellingtest3 extends AppCompatActivity {
     private EditText Testthree;
     static Integer s;
+    Integer count =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spellingtest3);
         Testthree = (EditText) findViewById(R.id.Testthree);
         s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
+
     }
     public void SpellingSubmitThree(View v) {
         String a= Testthree.getText().toString();
-        Integer count =0;
+
         //you got it right, get a point and move to next sentance
-        if(a.equals("isn't it harder, with &^ symbols and (punctuation)")) {
+        if(a.equals("isn't it harder, with ^ symbols and (punctuation)")) {
             Intent intent = new Intent(spellingtest3.this, spellingtest4.class);
             startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
         }
         //first try is wrong but you get two
-        else if((a.equals("isn't it harder, with &^ symbols and (punctuation)")==false)&&(count==0)){
+        else if((a.equals("isn't it harder, with ^ symbols and (punctuation)")==false)&&(count==0)){
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
                     "Please Try again",

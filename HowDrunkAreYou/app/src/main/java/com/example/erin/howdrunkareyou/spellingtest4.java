@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class spellingtest4 extends AppCompatActivity {
     private EditText Testfour;
     static Integer s;
+    Integer count =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,6 @@ public class spellingtest4 extends AppCompatActivity {
 
     public void SpellingSubmitFour(View v) {
         String a = Testfour.getText().toString();
-        Integer count = 0;
         //you got it right, get a point and move to next sentance
         if (a.equals("{This(Sentance[has]Nested)brackets}")) {
             Intent intent = new Intent(spellingtest4.this, spellingtest5.class);

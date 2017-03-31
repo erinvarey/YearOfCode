@@ -19,5 +19,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="84dp"
         android:onClick="TestThreeGo"
-        android:text="Ready?" />
+        android:text="Ready" />
 </RelativeLayout>
