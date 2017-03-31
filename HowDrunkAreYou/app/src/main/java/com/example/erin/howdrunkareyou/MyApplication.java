@@ -12,16 +12,16 @@ public class MyApplication extends Application {
         return SpellingCorrect;
     }
     public static void SetSpellingCorrect(Integer SpellingCorrectNew) {
-        SpellingCorrect = SpellingCorrectNew;
+        SpellingCorrect = SpellingCorrectNew.intValue();
     }
     public static Integer Precision=0;
     public static Integer getPrecision() { return Precision;}
     public static void setPrecision(Integer PrecisionNew){
-        Precision= PrecisionNew;
+        Precision= PrecisionNew.intValue();
     }
     public static Integer Math=0;
     public static Integer getMath() { return Math;}
     public static void setMath(Integer MathNew){
-        Math= MathNew;
+        Math = MathNew.intValue();
     }
 }

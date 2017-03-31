@@ -30,6 +30,7 @@
         <activity android:name=".TestTwo"></activity>
         <activity android:name=".TestThreeIntro"></activity>
         <activity android:name=".TestThree"></activity>
+        <activity android:name=".Results"></activity>
     </application>
 
 </manifest>

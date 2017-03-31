@@ -14,25 +14,41 @@ public class TestThree extends AppCompatActivity {
     private EditText MathAnswerOne;
     private EditText MathAnswerTwo;
     private EditText MathAnswerThree;
+    Integer grab = MyApplication.getMath();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.testthree);
         MathAnswerOne = (EditText) findViewById(R.id.MathAnswerOne);
         MathAnswerTwo = (EditText) findViewById(R.id.MathAnswerTwo);
         MathAnswerThree = (EditText) findViewById(R.id.MathAnswerThree);
-        Integer grab = MyApplication.getMath();
     }
     public boolean MathRightOne() {
         String a = MathAnswerOne.getText().toString();
-        Integer num = Integer.parseInt(a);
-        Boolean answerone= (num == 17);
+        Integer num = 0;
+        Integer num2 = 0;
+        Integer num3 = 0;
+        try {
+            num = Integer.parseInt(a);
+        }catch(NumberFormatException e){
+
+        }
+        Boolean answerone= (num == 22);
 
         String b=MathAnswerTwo.getText().toString();
-        Integer num2= Integer.parseInt(b);
+        try {
+            num2= Integer.parseInt(b);
+        }catch(NumberFormatException e){
+
+        }
         Boolean answertwo= (num2==7);
 
         String c=MathAnswerThree.getText().toString();
-        Integer num3= Integer.parseInt(c);
+        try {
+            num3= Integer.parseInt(c);
+        }catch(NumberFormatException e){
+
+        }
         Boolean answerthree= (num3==47);
 
         return (answerone && answertwo && answerthree);
