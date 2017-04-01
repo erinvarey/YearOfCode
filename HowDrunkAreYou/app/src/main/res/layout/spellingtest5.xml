@@ -20,13 +20,12 @@
         android:id="@+id/Testfive"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Enter the sentance above here"
-        android:layout_marginBottom="129dp"
         android:layout_above="@+id/button5"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="129dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/button5"
@@ -45,7 +44,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Phrase 3/5"
+        android:text="Phrase 5/5"
         android:textColor="@android:color/black"
         android:textSize="30sp" />
 </RelativeLayout>

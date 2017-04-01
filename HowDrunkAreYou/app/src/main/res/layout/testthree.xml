@@ -12,8 +12,7 @@
         android:layout_below="@+id/MathTwo"
         android:layout_marginTop="27dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="answer here" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/MathAnswerOne"
@@ -24,8 +23,7 @@
         android:layout_below="@+id/MathOne"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="answer here" />
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/MathOne"
@@ -42,13 +40,12 @@
         android:id="@+id/MathAnswerThree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/MathThree"
         android:layout_marginTop="29dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="answer here"
-        android:layout_below="@+id/MathThree"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/MathTwo"

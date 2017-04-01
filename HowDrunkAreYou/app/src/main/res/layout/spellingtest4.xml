@@ -23,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Phrase 3/5"
+        android:text="Phrase 4/5"
         android:textColor="@android:color/black"
         android:textSize="30sp" />
 
@@ -46,6 +46,5 @@
         android:layout_below="@+id/textView6"
         android:layout_marginTop="131dp"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Enter the sentance above here" />
+        android:inputType="textMultiLine" />
 </RelativeLayout>

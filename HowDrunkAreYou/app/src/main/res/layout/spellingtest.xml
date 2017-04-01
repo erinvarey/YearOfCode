@@ -24,8 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:ems="10"
-        android:inputType="textMultiLine"
-        tools:text="enter answer here" />
+        android:inputType="textMultiLine" />
 
     <TextView
         android:id="@+id/textView3"
