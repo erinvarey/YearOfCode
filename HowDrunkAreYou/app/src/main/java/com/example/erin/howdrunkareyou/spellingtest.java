@@ -35,7 +35,7 @@ public class spellingtest extends AppCompatActivity {
           //  MyApplication.SpellingCorrect++;
         }
         //first try is wrong but you get two
-        else if((a.equals("This first sentence is going to be easy")==false)&&(count==0)){
+        /*else if((a.equals("This first sentence is going to be easy")==false)&&(count==0)){
             count++;
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
@@ -43,7 +43,7 @@ public class spellingtest extends AppCompatActivity {
                     Toast.LENGTH_LONG);
             myToast.show();
 
-        }
+        } */
         //failed second try move on to next phrase
         else{
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);

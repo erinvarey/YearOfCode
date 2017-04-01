@@ -32,14 +32,14 @@ public class spellingtest2 extends AppCompatActivity {
 
         }
         //first try is wrong but you get two
-        else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==0)){
+       /* else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==0)){
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
                     "Please Try again",
                     Toast.LENGTH_LONG);
             myToast.show();
             count++;
-        }
+        } */
         //failed second try move on to next phrase
         else{
             Intent intent = new Intent(spellingtest2.this, spellingtest3.class);

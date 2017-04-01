@@ -33,14 +33,14 @@ public class spellingtest3 extends AppCompatActivity {
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
         }
         //first try is wrong but you get two
-        else if((a.equals("isn't it harder, with ^ symbols and (punctuation)")==false)&&(count==0)){
+       /* else if((a.equals("isn't it harder, with ^ symbols and (punctuation)")==false)&&(count==0)){
             Toast myToast = Toast.makeText(
                     getApplicationContext(),
                     "Please Try again",
                     Toast.LENGTH_LONG);
             myToast.show();
             count++;
-        }
+        } */
         //failed second try move on to next phrase
         else {
             Intent intent = new Intent(spellingtest3.this, spellingtest4.class);

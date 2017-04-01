@@ -20,7 +20,7 @@ public class TestThree extends AppCompatActivity {
     Integer grab = MyApplication.getMath();
 
     private int answer1 = 0;
-    private int answer2 = 0;
+    private int answer2 = 0; //memes
     private int answer3 = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
