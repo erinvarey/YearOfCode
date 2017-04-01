@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView14"
+        android:layout_below="@+id/MathTwo"
         android:layout_marginTop="27dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -31,12 +31,12 @@
         android:id="@+id/MathOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:text="Question 1:    3 X 5 + 7"
         android:textColor="@android:color/black"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/MathAnswerThree"
@@ -46,12 +46,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="answer here"
-        android:layout_below="@+id/textView15"
+        android:layout_below="@+id/MathThree"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/MathTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
@@ -63,16 +63,16 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/MathThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question 3:    (3+4)*7-2"
         android:textColor="@android:color/black"
         android:textSize="30sp"
+        android:layout_marginTop="23dp"
         android:layout_below="@+id/MathAnswerTwo"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button7"
