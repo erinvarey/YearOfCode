@@ -20,14 +20,14 @@
         android:id="@+id/Testone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/WordOne"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:ems="10"
         android:inputType="textMultiLine" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/WordOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="This first sentence is going to be easy"

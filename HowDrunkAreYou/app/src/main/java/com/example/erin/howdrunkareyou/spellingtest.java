@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 /**
  * Created by Erin on 21/03/2017.
@@ -21,6 +24,10 @@ public class spellingtest extends AppCompatActivity {
         setContentView(R.layout.spellingtest);
         Testone = (EditText) findViewById(R.id.Testone);
         s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
+
+        TextView WordOne = (TextView) findViewById(R.id.WordOne);
+        String word = generateWord();
+        WordOne.setText(word);
 
 
     }
@@ -50,6 +57,18 @@ public class spellingtest extends AppCompatActivity {
             startActivity(intent);
         }
 
+    }
+    private String generateWord(){
+        Random rand = new Random();
+        String letters= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()[]{}^*!@#$"; //64 characters long
+        String word = "";
+        int num =rand.nextInt(64);
+        while (word.length() < 15) {
+            int index = (int) (rand.nextFloat() * letters.length());
+            char c = letters.charAt(index);
+            word.concat(String.valueOf(c));
+        }
+        return word;
     }
 }
 

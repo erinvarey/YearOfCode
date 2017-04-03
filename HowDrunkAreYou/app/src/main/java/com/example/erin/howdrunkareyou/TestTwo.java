@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 /**
  * Created by Erin on 27/03/2017.
@@ -14,12 +15,14 @@ public class TestTwo extends AppCompatActivity {
     //this has a bug where if you keep hitting the button it jumps up good count
     //TO BE FIXED ONCE BETA IS DONE
     public Integer goodCount=0;
+    public boolean CircleOne;
     //public Integer badCount=0;
     Integer grab = MyApplication.getPrecision();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.testtwo);
     }
+
     public void GoodClick(View v){
         goodCount++;
         Log.d("myTag", "Good click");
