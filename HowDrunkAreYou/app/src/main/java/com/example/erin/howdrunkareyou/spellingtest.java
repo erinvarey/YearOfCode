@@ -18,6 +18,7 @@ public class spellingtest extends AppCompatActivity {
     private EditText Testone;
     static Integer count =0;
     static Integer s;
+    String word = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class spellingtest extends AppCompatActivity {
     public void SpellingSubmitOne(View v) {
         String a= Testone.getText().toString();
         //you got it right, get a point and move to next sentance
-        if(a.equals("This first sentence is going to be easy")) {
+        if(a.equals(word.toString())) {
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);
             startActivity(intent);
             //increments correctness counter. The range of scores well determine how drunk you are
@@ -61,12 +62,12 @@ public class spellingtest extends AppCompatActivity {
     private String generateWord(){
         Random rand = new Random();
         String letters= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()[]{}^*!@#$"; //64 characters long
-        String word = "";
+       // String word = "";
         int num =rand.nextInt(64);
         while (word.length() < 15) {
             int index = (int) (rand.nextFloat() * letters.length());
             char c = letters.charAt(index);
-            word.concat(String.valueOf(c));
+            word=word+(String.valueOf(c));
         }
         return word;
     }
