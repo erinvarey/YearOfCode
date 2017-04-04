@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 /**
  * Created by Erin on 23/03/2017.
@@ -15,6 +18,7 @@ public class spellingtest5 extends AppCompatActivity {
     private EditText Testfive;
     static Integer s;
     Integer count=0;
+    String word = "";
 
 
     @Override
@@ -23,13 +27,17 @@ public class spellingtest5 extends AppCompatActivity {
         setContentView(R.layout.spellingtest5);
         Testfive = (EditText) findViewById(R.id.Testfive);
 
+        TextView WordFive = (TextView) findViewById(R.id.WordFive);
+        String word = generateWord();
+        WordFive.setText(word);
+
     }
 
     public void SpellingSubmitFive(View v) {
         String a = Testfive.getText().toString();
         s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
         //you got it right, get a point and move to next sentance
-        if (a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus")) {
+        if (a.equals(word)) {
             Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);
             startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
@@ -51,6 +59,18 @@ public class spellingtest5 extends AppCompatActivity {
           //  MainActivity.SpellingCorrect++;
         }
 
+    }
+    private String generateWord(){
+        Random rand = new Random();
+        String letters= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()[]{}^*!@#$"; //64 characters long
+        // String word = "";
+        int num =rand.nextInt(64);
+        while (word.length() < 10) {
+            int index = (int) (rand.nextFloat() * letters.length());
+            char c = letters.charAt(index);
+            word=word+(String.valueOf(c));
+        }
+        return word;
     }
 }
 

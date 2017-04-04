@@ -64,7 +64,7 @@ public class spellingtest extends AppCompatActivity {
         String letters= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()[]{}^*!@#$"; //64 characters long
        // String word = "";
         int num =rand.nextInt(64);
-        while (word.length() < 15) {
+        while (word.length() < 10) {
             int index = (int) (rand.nextFloat() * letters.length());
             char c = letters.charAt(index);
             word=word+(String.valueOf(c));
