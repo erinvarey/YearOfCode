@@ -11,7 +11,12 @@ public class thread extends Thread {
         long end = start + 20*1000; // 60 seconds * 1000 ms/sec
         while(System.currentTimeMillis() < end) {
         }
-        spellingtest.var.TimeOut();
+        if (spellingtest.one) {
+            spellingtest.var.TimeOut();
+        }
+        if(spellingtest2.two){
+            spellingtest2.var.TimeOut();
+        }
 
     }
 }

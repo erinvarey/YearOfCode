@@ -19,6 +19,11 @@ public class spellingtest2 extends AppCompatActivity {
     static Integer s;
     Integer count =0;
     String word = "";
+    static spellingtest2 var;
+    static boolean two = true;
+    public spellingtest2(){
+        var = this;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +34,21 @@ public class spellingtest2 extends AppCompatActivity {
         TextView WordTwo = (TextView) findViewById(R.id.WordTwo);
         String word = generateWord();
         WordTwo.setText(word);
+
+        Thread thread = new thread();
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+    public void TimeOut(){
+        Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
+        startActivity(intent);
+        two = false;
+    }
+
     public void SpellingSubmitTwo(View v) {
         String a= Testtwo.getText().toString();
         //you got it right, get a point and move to next sentance
@@ -37,7 +56,7 @@ public class spellingtest2 extends AppCompatActivity {
             Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
             startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
-
+            two=false;
         }
         //first try is wrong but you get two
        /* else if((a.equals("She sells sea shell by the sea shore")==false)&&(count==0)){
@@ -52,6 +71,7 @@ public class spellingtest2 extends AppCompatActivity {
         else{
             Intent intent = new Intent(spellingtest2.this, spellingtest3.class);
             startActivity(intent);
+            two=false;
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
            // MainActivity.SpellingCorrect++;
         }

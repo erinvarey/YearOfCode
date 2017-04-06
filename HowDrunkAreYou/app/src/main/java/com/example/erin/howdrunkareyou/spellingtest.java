@@ -22,6 +22,7 @@ public class spellingtest extends AppCompatActivity {
     static Integer count =0;
     static Integer s;
     static spellingtest var;
+    static boolean one = true;
     public spellingtest(){
         var = this;
     }
@@ -49,6 +50,7 @@ public class spellingtest extends AppCompatActivity {
     public void TimeOut(){
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);
             startActivity(intent);
+            one = false;
     }
     public void SpellingSubmitOne(View v) {
             String a = Testone.getText().toString();
@@ -59,11 +61,13 @@ public class spellingtest extends AppCompatActivity {
                 //increments correctness counter. The range of scores well determine how drunk you are
                 ((MyApplication) this.getApplication()).SetSpellingCorrect(s + 1);
                 //  MyApplication.SpellingCorrect++;
+                one = false;
             }
             //spelt incorrectly
             else {
                 Intent intent = new Intent(spellingtest.this, spellingtest2.class);
                 startActivity(intent);
+                one = false;
             }
 
     }
