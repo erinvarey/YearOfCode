@@ -19,6 +19,11 @@ public class spellingtest3 extends AppCompatActivity {
     static Integer s;
     Integer count =0;
     String word ="";
+    static spellingtest3 var;
+    static boolean three = true;
+    public spellingtest3(){
+        var = this;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,19 @@ public class spellingtest3 extends AppCompatActivity {
         String word = generateWord();
         WordThree.setText(word);
 
+        Thread thread = new thread();
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void TimeOut(){
+        Intent intent = new Intent(spellingtest3.this, spellingtest4.class);
+        startActivity(intent);
+        three = false;
     }
     public void SpellingSubmitThree(View v) {
         String a= Testthree.getText().toString();
@@ -39,6 +57,7 @@ public class spellingtest3 extends AppCompatActivity {
             Intent intent = new Intent(spellingtest3.this, spellingtest4.class);
             startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
+            three=false;
         }
         //first try is wrong but you get two
        /* else if((a.equals("isn't it harder, with ^ symbols and (punctuation)")==false)&&(count==0)){
@@ -53,6 +72,7 @@ public class spellingtest3 extends AppCompatActivity {
         else {
             Intent intent = new Intent(spellingtest3.this, spellingtest4.class);
             startActivity(intent);
+            three=false;
 
         }
 

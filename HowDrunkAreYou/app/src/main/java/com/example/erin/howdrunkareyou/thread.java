@@ -17,6 +17,9 @@ public class thread extends Thread {
         if(spellingtest2.two){
             spellingtest2.var.TimeOut();
         }
+        if(spellingtest3.three){
+            spellingtest3.var.TimeOut();
+        }
 
     }
 }
