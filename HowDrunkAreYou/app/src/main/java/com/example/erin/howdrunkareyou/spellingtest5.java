@@ -19,6 +19,11 @@ public class spellingtest5 extends AppCompatActivity {
     static Integer s;
     Integer count=0;
     String word = "";
+    static spellingtest5 var;
+    static boolean five = true;
+    public spellingtest5(){
+        var = this;
+    }
 
 
     @Override
@@ -31,8 +36,20 @@ public class spellingtest5 extends AppCompatActivity {
         String word = generateWord();
         WordFive.setText(word);
 
-    }
+        Thread thread = new thread();
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+    }
+    public void TimeOut(){
+        Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);
+        startActivity(intent);
+        five = false;
+    }
     public void SpellingSubmitFive(View v) {
         String a = Testfive.getText().toString();
         s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
@@ -41,6 +58,7 @@ public class spellingtest5 extends AppCompatActivity {
             Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);
             startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
+            five=false;
         }
         //first try is wrong but you get two
        /* else if ((a.equals("AltERnaTiNg bEtWeeN keYs TaKES fOcus") == false) && (count == 0)) {
@@ -55,6 +73,7 @@ public class spellingtest5 extends AppCompatActivity {
         else {
             Intent intent = new Intent(spellingtest5.this, TestTwoIntro.class);
             startActivity(intent);
+            five=false;
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
           //  MainActivity.SpellingCorrect++;
         }

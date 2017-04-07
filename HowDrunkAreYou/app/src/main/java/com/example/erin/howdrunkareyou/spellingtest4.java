@@ -19,6 +19,11 @@ public class spellingtest4 extends AppCompatActivity {
     static Integer s;
     Integer count =0;
     String word = "";
+    static spellingtest4 var;
+    static boolean four = true;
+    public spellingtest4(){
+        var = this;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +35,20 @@ public class spellingtest4 extends AppCompatActivity {
         TextView WordFour = (TextView) findViewById(R.id.WordFour);
         String word = generateWord();
         WordFour.setText(word);
-    }
 
+        Thread thread = new thread();
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void TimeOut(){
+        Intent intent = new Intent(spellingtest4.this, spellingtest5.class);
+        startActivity(intent);
+        four = false;
+    }
     public void SpellingSubmitFour(View v) {
         String a = Testfour.getText().toString();
         //you got it right, get a point and move to next sentance
@@ -39,6 +56,7 @@ public class spellingtest4 extends AppCompatActivity {
             Intent intent = new Intent(spellingtest4.this, spellingtest5.class);
             startActivity(intent);
             ((MyApplication) this.getApplication()).SetSpellingCorrect(s+1);
+            four=false;
         }
         //first try is wrong but you get two
        /* else if ((a.equals("{This(Sentance[has]Nested)brackets}") == false) && (count == 0)) {
@@ -53,6 +71,7 @@ public class spellingtest4 extends AppCompatActivity {
         else {
             Intent intent = new Intent(spellingtest4.this, spellingtest5.class);
             startActivity(intent);
+            four=false;
             //((MyApplication) this.getApplication()).setSpellingCorrect(1);
          //   MainActivity.SpellingCorrect++;
         }

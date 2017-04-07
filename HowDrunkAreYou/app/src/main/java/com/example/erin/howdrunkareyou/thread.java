@@ -20,6 +20,12 @@ public class thread extends Thread {
         if(spellingtest3.three){
             spellingtest3.var.TimeOut();
         }
+        if(spellingtest4.four){
+            spellingtest4.var.TimeOut();
+        }
+        if(spellingtest5.five){
+            spellingtest5.var.TimeOut();
+        }
 
     }
 }
