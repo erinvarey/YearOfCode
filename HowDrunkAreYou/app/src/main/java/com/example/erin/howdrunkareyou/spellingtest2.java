@@ -49,7 +49,8 @@ public class spellingtest2 extends AppCompatActivity {
         if(a.equals(word)){          //increments correctness counter
             MyApplication.incrementCorrectSpellings();
         }
-        nextTest();
+        MyTimer.instance().interrupt();
+        //nextTest();
     }
 
     // Proceed to next test

@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
 
 public class MyTimer extends Thread {
 
-    private long time = 20000;
+    private long time = 28000;
 
     private Callable<Void> callback;    // one way
 
@@ -47,7 +47,7 @@ public class MyTimer extends Thread {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e){
-            return;
+          //  return;
         }
         try {
             callback.call();
