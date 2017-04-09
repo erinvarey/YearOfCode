@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
+import java.util.concurrent.Callable;
 
 /**
  * Created by Erin on 23/03/2017.
@@ -36,13 +37,17 @@ public class spellingtest4 extends AppCompatActivity {
         String word = generateWord();
         WordFour.setText(word);
 
-        Thread thread = new thread();
-        thread.start();
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        MyTimer.getInstance().setCallback(new Callable<Void>() {
+            @Override
+            public Void call() throws Exception {
+                TimeOut();
+                return null;
+            }
+        });
+
+        // another way
+        MyTimer.getInstance().SetTimeOut(this, spellingtest5.class);
+        MyTimer.getInstance().start();
     }
     public void TimeOut(){
         Intent intent = new Intent(spellingtest4.this, spellingtest5.class);

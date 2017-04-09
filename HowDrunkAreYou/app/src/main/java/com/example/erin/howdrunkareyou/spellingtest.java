@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.concurrent.Callable;
 
 import java.util.Random;
 import java.util.Timer;
+
 
 /**
  * Created by Erin on 21/03/2017.
@@ -22,7 +24,7 @@ public class spellingtest extends AppCompatActivity {
     static Integer count =0;
     static Integer s;
     static spellingtest var;
-    static boolean one = true;
+    static boolean one;
     public spellingtest(){
         var = this;
     }
@@ -35,17 +37,21 @@ public class spellingtest extends AppCompatActivity {
         setContentView(R.layout.spellingtest);
         Testone = (EditText) findViewById(R.id.Testone);
         s= ((MyApplication) this.getApplication()).GetSpellingCorrect();
-
+        one=true;
         TextView WordOne = (TextView) findViewById(R.id.WordOne);
         String word = generateWord();
         WordOne.setText(word);
-        Thread thread = new thread();
-        thread.start();
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        MyTimer.getInstance().setCallback(new Callable<Void>() {
+            @Override
+            public Void call() throws Exception {
+                TimeOut();
+                return null;
+            }
+        });
+
+        // another way
+        MyTimer.getInstance().SetTimeOut(this, spellingtest2.class);
+        MyTimer.getInstance().start();
     }
     public void TimeOut(){
             Intent intent = new Intent(spellingtest.this, spellingtest2.class);
