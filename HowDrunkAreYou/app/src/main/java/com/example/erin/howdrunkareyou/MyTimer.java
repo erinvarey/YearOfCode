@@ -23,7 +23,7 @@ public class MyTimer extends Thread {
     private MyTimer() {}
 
     public void setTime(){
-        instance.time = 20000;
+        instance.time = 28000;
     }
 
     public void setTime(long time){
