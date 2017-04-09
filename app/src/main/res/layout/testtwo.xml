@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/Next"
+        android:layout_alignBottom="@+id/Next"
+        android:layout_toEndOf="@+id/BadSix"
+        android:layout_toRightOf="@+id/BadSix"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/Next"
+        android:layout_alignBottom="@+id/Next"
+        android:layout_toEndOf="@+id/BadSix"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible"
+        android:layout_toRightOf="@+id/BadSix" />
+
+    <Button
+        android:id="@+id/CircleThree"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible"
+        android:layout_above="@+id/button14"
+        android:layout_toRightOf="@+id/BadFive"
+        android:layout_toEndOf="@+id/BadFive" />
+
+    <Button
+        android:id="@+id/CircleOne"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="39dp"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/CircleTwo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="13dp"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible"
+        android:layout_below="@+id/BadOne"
+        android:layout_toLeftOf="@+id/BadTwo"
+        android:layout_toEndOf="@+id/BadFive"
+        android:layout_toRightOf="@+id/BadFive" />
+
+    <Button
+        android:id="@+id/CircleFour"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/CircleThree"
+        android:layout_alignRight="@+id/CircleThree"
+        android:layout_below="@+id/CircleThree"
+        android:layout_marginTop="36dp"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/CircleFive"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/CircleOne"
+        android:layout_alignRight="@+id/CircleOne"
+        android:layout_alignTop="@+id/BadSeven"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/CircleSix"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/CircleFour"
+        android:layout_marginTop="26dp"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible"
+        android:layout_toLeftOf="@+id/BadThree"
+        android:layout_toEndOf="@+id/BadSix"
+        android:layout_toRightOf="@+id/BadSix" />
+
+    <Button
+        android:id="@+id/CircleSeven"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/CircleFive"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/button11"
+        android:background="@android:color/black"
+        android:onClick="GoodClick"
+        android:text='""'
+        android:visibility="visible"
+        android:layout_toRightOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/BadOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/CircleOne"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:layout_toEndOf="@+id/CircleOne"
+        android:layout_toRightOf="@+id/CircleOne"
+        android:onClick="badClick"
+        android:text='""'
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/BadTwo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:elevation="1dp"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible"
+        android:layout_below="@+id/BadOne"
+        android:layout_toRightOf="@+id/CircleThree"
+        android:layout_toEndOf="@+id/CircleThree" />
+
+    <Button
+        android:id="@+id/BadThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CircleSeven"
+        android:layout_below="@+id/BadTwo"
+        android:layout_toEndOf="@+id/CircleThree"
+        android:layout_toRightOf="@+id/CircleThree"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/BadFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_alignBottom="@+id/BadSeven"
+        android:layout_toRightOf="@+id/BadTwo"
+        android:layout_toEndOf="@+id/BadTwo" />
+
+    <Button
+        android:id="@+id/BadFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible"
+        android:layout_below="@+id/CircleTwo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/BadSix"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_below="@+id/CircleTwo"
+        android:layout_toLeftOf="@+id/CircleFour"
+        android:layout_toStartOf="@+id/CircleFour"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/BadSeven"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/CircleSeven"
+        android:layout_toEndOf="@+id/CircleSeven" />
+
+    <Button
+        android:id="@+id/BadEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BadFive"
+        android:layout_alignStart="@+id/BadFive"
+        android:layout_below="@+id/CircleFive"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/BadNine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BadEight"
+        android:layout_toLeftOf="@+id/CircleFive"
+        android:layout_toStartOf="@+id/CircleFive"
+        android:onClick="badClick"
+        android:text='""'
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/BadThree"
+        android:layout_marginTop="11dp"
+        android:onClick="next"
+        android:text="Next Task" />
+
+    <Button
+        android:id="@+id/BadClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/BadThree"
+        android:layout_alignStart="@+id/BadThree"
+        android:layout_below="@+id/BadEight"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CircleSix"
+        android:layout_toLeftOf="@+id/BadSeven"
+        android:layout_toStartOf="@+id/BadSeven"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/CircleFive"
+        android:layout_toEndOf="@+id/CircleOne"
+        android:layout_toRightOf="@+id/CircleOne"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/CircleOne"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button10"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/Next"
+        android:layout_alignBottom="@+id/Next"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible"
+        android:layout_alignRight="@+id/button16"
+        android:layout_alignEnd="@+id/button16"
+        android:layout_toRightOf="@+id/button16"
+        android:layout_toEndOf="@+id/button16" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/BadFive"
+        android:layout_toEndOf="@+id/CircleOne"
+        android:layout_toRightOf="@+id/CircleOne"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CircleFive"
+        android:onClick="badClick"
+        android:text="Button"
+        android:visibility="invisible"
+        android:layout_alignRight="@+id/button11"
+        android:layout_alignEnd="@+id/button11" />
+
+</RelativeLayout>
