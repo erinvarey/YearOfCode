@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
+import java.util.concurrent.Callable;
 
 /**
  * Created by Erin on 29/03/2017.
@@ -21,6 +22,8 @@ public class TestThree extends AppCompatActivity {
     private int answer1 = 0;
     private int answer2 = 0;
     private int answer3 = 0;
+
+    private int reset= 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,27 @@ public class TestThree extends AppCompatActivity {
         eqn1.setText(tests[0][0]);
         eqn2.setText(tests[1][0]);
         eqn3.setText(tests[2][0]);
+
+        MyTimer stopwatch = MyTimer.instance();
+
+        // Method to call after timeout
+        stopwatch.setCallback(new Callable<Void>() {
+            @Override
+            public Void call() throws Exception {
+                Reset();
+                reset++;
+                return null;
+            }
+        });
+
+        stopwatch.start();
+    }
+    public void Reset(){
+        if(reset>0){
+            MyApplication.setRightCalcs(corrects());
+            Intent intent = new Intent(TestThree.this, Results.class);
+            startActivity(intent);
+        }
     }
 
     // Return number of correct responses
