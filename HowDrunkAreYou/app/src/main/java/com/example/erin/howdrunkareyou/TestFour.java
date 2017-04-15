@@ -26,7 +26,7 @@ public class TestFour extends AppCompatActivity{
             //inputOne button = (Magicbutton) v;
             inputOne.setVisibility(View.INVISIBLE);
         }
-    }
+    });
 
-}
+    }
 }
