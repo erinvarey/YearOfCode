@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
  */
 
 public class ReactionTimer extends Thread {
-    private long Countdown = 28000;
+    private long Countdown = 2000;
 
     private Callable<Void> callback;    // one way
 
@@ -19,10 +19,6 @@ public class ReactionTimer extends Thread {
     }
 
     private ReactionTimer() {}
-
-    public void setTime(){
-        instance.Countdown = 28000;
-    }
 
     public void setTime(long time){
         instance.Countdown = time;
@@ -44,6 +40,8 @@ public class ReactionTimer extends Thread {
     public void run() {
         try {
             Thread.sleep(Countdown);
+            setTime(Countdown/2);
+
         } catch (InterruptedException e){
             //  return;
         }

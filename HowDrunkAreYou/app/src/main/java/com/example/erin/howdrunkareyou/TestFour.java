@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.concurrent.Callable;
+
 /**
  * Created by Erin on 30/03/2017.
  */
@@ -17,6 +19,19 @@ public class TestFour extends AppCompatActivity{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.testthree);
             inputOne = (Button) findViewById(R.id.Magicbutton);
+
+            ReactionTimer stopwatch = ReactionTimer.instance();
+
+            // Method to call after timeout
+            stopwatch.setCallback(new Callable<Void>() {
+                @Override
+                public Void call() throws Exception {
+                  //nextactivity here
+                    return null;
+                }
+            });
+
+            stopwatch.start();
 
     inputOne.setOnClickListener(new View.OnClickListener() {
 
