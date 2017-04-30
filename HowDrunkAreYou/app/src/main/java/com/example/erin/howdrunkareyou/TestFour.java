@@ -33,15 +33,15 @@ public class TestFour extends AppCompatActivity{
 
             stopwatch.start();
 
-    inputOne.setOnClickListener(new View.OnClickListener() {
 
 
-        @Override
-        public void onClick(View v) {
-            //inputOne button = (Magicbutton) v;
-            inputOne.setVisibility(View.INVISIBLE);
-        }
-    });
-
+    }
+    public void reset(){
+        inputOne.setVisibility(View.VISIBLE);
+    }
+    public void onClick(View v) {
+        //inputOne button = (Magicbutton) v;
+        inputOne.setVisibility(View.INVISIBLE);
+        MyTimer.instance().interrupt();
     }
 }
