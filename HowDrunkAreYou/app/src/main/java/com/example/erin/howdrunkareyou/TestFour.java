@@ -16,6 +16,7 @@ public class TestFour extends AppCompatActivity{
 
     private Button inputOne;
         protected void onCreate(Bundle savedInstanceState){
+
             super.onCreate(savedInstanceState);
             setContentView(R.layout.testthree);
             inputOne = (Button) findViewById(R.id.Magicbutton);
@@ -37,11 +38,14 @@ public class TestFour extends AppCompatActivity{
 
     }
     public void reset(){
+
         inputOne.setVisibility(View.VISIBLE);
     }
     public void onClick(View v) {
         //inputOne button = (Magicbutton) v;
         inputOne.setVisibility(View.INVISIBLE);
         MyTimer.instance().interrupt();
+        reset();
     }
+
 }
