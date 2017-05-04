@@ -1,5 +1,6 @@
 package com.example.erin.howdrunkareyou;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -46,6 +47,10 @@ public class TestFour extends AppCompatActivity{
         inputOne.setVisibility(View.INVISIBLE);
         MyTimer.instance().interrupt();
         reset();
+    }
+    public void end(){
+            Intent intent = new Intent(TestFour.this, Results.class);
+            startActivity(intent);
     }
 
 }

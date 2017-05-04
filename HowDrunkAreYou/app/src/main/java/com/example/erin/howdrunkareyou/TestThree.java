@@ -63,7 +63,7 @@ public class TestThree extends AppCompatActivity {
     public void Reset(){
         if(reset>0){
             MyApplication.setRightCalcs(corrects());
-            Intent intent = new Intent(TestThree.this, Results.class);
+            Intent intent = new Intent(TestThree.this, TestFourIntro.class);
             startActivity(intent);
         }
     }
@@ -86,7 +86,7 @@ public class TestThree extends AppCompatActivity {
     // Set score and proceed to next test
     public void submit(View v){
         MyApplication.setRightCalcs(corrects());
-        Intent intent = new Intent(TestThree.this, Results.class);
+        Intent intent = new Intent(TestThree.this, TestFourIntro.class);
         startActivity(intent);
     }
 }
